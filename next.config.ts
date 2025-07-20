@@ -1,16 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
   images: {
     unoptimized: true,
   },
-  typescript: {
-    // ignoreBuildErrors: true,
+  experimental: {
+    asyncParams: false, // 👈 ВАЖНО
   },
-  //  experimental: {
-  //   asyncParams: false, // 👈 ВАЖНО
-  // },
 };
 
 export default nextConfig;
